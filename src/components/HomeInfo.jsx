@@ -18,6 +18,8 @@ const renderContent = {
             Olá, eu sou <span className="font-semibold">João Travalini</span> 👋
             <br />
             Engenheiro de computação 
+            <br />
+            <h6 className="text-xs">"Clique e arraste para explorar a ilha"</h6>
         </h1>
     ),
     2: (
