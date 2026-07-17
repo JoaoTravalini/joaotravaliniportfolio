@@ -1,20 +1,14 @@
 import { asimovjr, eletrodenis, vail } from "../assets/images";
 import {
-    car,
     contact,
     css,
-    estate,
     express,
     github,
     html,
     javascript,
     linkedin,
     mongodb,
-    pricewise,
     react,
-    snapgram,
-    summiz,
-    threads,
     typescript
 } from "../assets/icons";
 
@@ -176,7 +170,7 @@ export const experiences = [
                     "Gerenciamento de projetos de desenvolvimento, incluindo planejamento, definição de escopo e acompanhamento de prazos.",
                     "Divisão e organização de tarefas entre membros da equipe, garantindo fluxo de trabalho eficiente.",
                     "Comunicação com clientes para levantamento de requisitos e alinhamento de expectativas.",
-                    "Desenvolvimento de sites institucionais, sistemas web (Angular, React) e aplicativos mobile (Flutter, dart).",
+                    "Desenvolvimento de sites institucionais, sistemas web (Angular, React) e aplicativos mobile (Flutter, Dart).",
                     "Criação de protótipos e interfaces para validação de ideias e melhoria da experiência do usuário.",
                     "Acompanhamento do progresso das entregas e garantia da qualidade dos projetos.",
                 ],
@@ -188,7 +182,7 @@ export const experiences = [
                     "Managed development projects, including planning, scope definition, and deadline tracking.",
                     "Divided and organized tasks among team members, ensuring an efficient workflow.",
                     "Communicated with clients to gather requirements and align expectations.",
-                    "Developed institutional websites, web systems (Angular, React), and mobile applications (Flutter, dart).",
+                    "Developed institutional websites, web systems (Angular, React), and mobile applications (Flutter, Dart).",
                     "Created prototypes and interfaces to validate ideas and improve the user experience.",
                     "Monitored delivery progress and ensured project quality.",
                 ],
@@ -233,7 +227,7 @@ export const socialLinks = [
     {
         name: 'GitHub',
         iconUrl: github,
-        link: 'https://github.com/YourGitHubUsername',
+        link: 'https://github.com/JoaoTravalini',
     },
     {
         name: 'LinkedIn',
@@ -244,92 +238,118 @@ export const socialLinks = [
 
 export const projects = [
     {
-        iconUrl: pricewise,
-        theme: 'btn-back-red',
-        link: 'https://github.com/adrianhajdin/pricewise',
-        content: {
-            pt: {
-                name: 'Amazon Price Tracker',
-                description: 'Desenvolvi uma aplicação web que monitora produtos na Amazon e notifica usuários sobre mudanças de preço, ajudando a encontrar as melhores ofertas.',
-            },
-            en: {
-                name: 'Amazon Price Tracker',
-                description: 'Developed a web application that tracks Amazon products and notifies users of price changes, helping them find the best deals.',
-            },
-        },
-    },
-    {
-        iconUrl: threads,
-        theme: 'btn-back-green',
-        link: 'https://github.com/adrianhajdin/threads',
-        content: {
-            pt: {
-                name: 'Clone Full Stack do Threads',
-                description: 'Criei uma réplica full stack da plataforma de discussões Threads, permitindo que usuários publiquem e interajam em conversas encadeadas.',
-            },
-            en: {
-                name: 'Full Stack Threads Clone',
-                description: 'Created a full-stack replica of the discussion platform Threads, enabling users to post and engage in threaded conversations.',
-            },
-        },
-    },
-    {
-        iconUrl: car,
         theme: 'btn-back-blue',
-        link: 'https://github.com/adrianhajdin/project_next13_car_showcase',
+        shortName: 'NBA',
+        repoLink: 'https://github.com/JoaoTravalini/projeto_python_2',
+        tags: ['Python', 'Pandas', 'Scikit-learn', 'PCA', 'K-Means'],
         content: {
             pt: {
-                name: 'Aplicativo de busca de carros',
-                description: 'Projetei e construí um aplicativo para encontrar e comparar carros no mercado, simplificando o processo de compra.',
+                name: 'Análise de dados NBA',
+                description: 'Projeto em Python para análise de dados usando um dataset de estatísticas da NBA. Inclui PCA para redução de dimensionalidade, clusterização K-Means com avaliação do K ideal e notebook de análise de correlação. Dataset removido conforme exigido. Construído com NumPy, Pandas, Matplotlib e Scikit-learn.',
             },
             en: {
-                name: 'Car Finding App',
-                description: 'Designed and built an app for finding and comparing cars on the market, streamlining the car-buying process.',
+                name: 'NBA Data Analysis',
+                description: 'Python project for data analysis using an NBA stats dataset. Includes PCA for dimensionality reduction, K-Means clustering with optimal K evaluation, and a correlation analysis notebook. Dataset excluded as required. Built with NumPy, Pandas, Matplotlib and Scikit-learn.',
             },
         },
     },
     {
-        iconUrl: snapgram,
-        theme: 'btn-back-pink',
-        link: 'https://github.com/adrianhajdin/social_media_app',
+        theme: 'btn-back-red',
+        shortName: 'LP',
+        repoLink: 'https://github.com/JoaoTravalini/loginpage',
+        demoLink: 'https://drive.google.com/file/d/13BfyTgHKl9UJLliVg46s5Cp5J4Xsl1cx/view',
+        tags: ['Angular', 'TypeScript', 'CSS'],
         content: {
             pt: {
-                name: 'Clone Full Stack do Instagram',
-                description: 'Construí um clone completo do Instagram, permitindo que usuários compartilhem fotos e se conectem em uma experiência familiar de rede social.',
+                name: 'Página de login',
+                description: 'Página de login desenvolvida com Angular e TypeScript para praticar o framework e suas linguagens. As folhas caindo no background foram feitas com apenas duas imagens e animadas com CSS.',
             },
             en: {
-                name: 'Full Stack Instagram Clone',
-                description: 'Built a complete Instagram clone, allowing users to share photos and connect with friends in a familiar social media environment.',
+                name: 'Login Page',
+                description: 'Login page built with Angular and TypeScript to practice the framework and its languages. The falling leaves in the background were created with only two images and animated with CSS.',
             },
         },
     },
     {
-        iconUrl: estate,
-        theme: 'btn-back-black',
-        link: 'https://github.com/adrianhajdin/projects_realestate',
+        theme: 'btn-back-green',
+        shortName: 'APP',
+        repoLink: 'https://github.com/JoaoTravalini/appdespesaspessoais',
+        demoLink: 'https://drive.google.com/file/d/1MFqou7_WPynJjIy5-6iQrN6BOHECl9mw/view',
+        tags: ['Flutter', 'Dart', 'Mobile'],
         content: {
             pt: {
-                name: 'Aplicação imobiliária',
-                description: 'Desenvolvi uma aplicação web para listagens imobiliárias, facilitando a busca por propriedades e a conexão entre compradores e vendedores.',
+                name: 'App de despesas pessoais',
+                description: 'Aplicativo mobile para cadastro e visualização de despesas, desenvolvido com Flutter e Dart. O objetivo é praticar o uso do framework e das linguagens utilizadas.',
             },
             en: {
-                name: 'Real-Estate Application',
-                description: 'Developed a web application for real estate listings, facilitating property searches and connecting buyers with sellers.',
+                name: 'Personal Expenses App',
+                description: 'Mobile app for registering and viewing expenses, built with Flutter and Dart. The goal is to practice the framework and the languages used in the project.',
             },
         },
     },
     {
-        iconUrl: summiz,
         theme: 'btn-back-yellow',
-        link: 'https://github.com/adrianhajdin/project_ai_summarizer',
+        shortName: 'CHAT',
+        repoLink: 'https://github.com/JoaoTravalini/realtimechat',
+        demoLink: 'https://drive.google.com/file/d/19qf698F1Qzh3lBBzyJwNvO5b-JzbGilH/view',
+        tags: ['Angular', 'TypeScript', 'Socket.io'],
         content: {
             pt: {
-                name: 'Aplicação de resumo com IA',
-                description: 'Aplicação que usa IA para gerar automaticamente resumos concisos e informativos a partir de textos longos ou artigos.',
+                name: 'Chat em tempo real',
+                description: 'Chat em tempo real para visualização de mensagens em dois navegadores ou abas diferentes, utilizando Angular, TypeScript e Socket.io. O objetivo é praticar o framework, as linguagens e as bibliotecas utilizadas.',
             },
             en: {
-                name: 'AI Summarizer Application',
-                description: 'App that leverages AI to automatically generate concise and informative summaries from lengthy text content or blog posts.',
+                name: 'Realtime Chat',
+                description: 'Realtime chat for viewing messages in two different browsers or tabs, built with Angular, TypeScript and Socket.io. The goal is to practice the framework, languages and libraries used.',
+            },
+        },
+    },
+    {
+        theme: 'btn-back-pink',
+        shortName: 'PKX',
+        repoLink: 'https://github.com/JoaoTravalini/pokedex',
+        demoLink: 'https://drive.google.com/file/d/1lySm2I3GCtSge6VoE5bmNyiwJykB6ULM/view',
+        tags: ['Angular', 'TypeScript', 'API'],
+        content: {
+            pt: {
+                name: 'Pokédex',
+                description: 'Pokédex para visualização dos Pokémons e suas habilidades, desenvolvida com Angular e TypeScript. O objetivo é praticar o uso do framework e das linguagens utilizadas.',
+            },
+            en: {
+                name: 'Pokedex',
+                description: 'Pokedex for viewing Pokemon and their abilities, built with Angular and TypeScript. The goal is to practice the framework and the languages used in the project.',
+            },
+        },
+    },
+    {
+        theme: 'btn-back-green',
+        shortName: 'ASI',
+        liveLink: 'https://asimovjr.com.br',
+        tags: ['WordPress', 'Institutional Website', 'Junior Enterprise'],
+        content: {
+            pt: {
+                name: 'Site Asimov Jr.',
+                description: 'Site institucional desenvolvido em WordPress para a Asimov Jr., empresa júnior de Computação. O projeto reúne informações sobre a empresa, serviços, projetos e canais de contato em uma presença digital profissional.',
+            },
+            en: {
+                name: 'Asimov Jr. Website',
+                description: 'Institutional website built with WordPress for Asimov Jr., a Computer Engineering junior enterprise. The project presents the company, services, projects, and contact channels through a professional digital presence.',
+            },
+        },
+    },
+    {
+        theme: 'btn-back-black',
+        shortName: 'ML',
+        repoLink: 'https://github.com/JoaoTravalini/IaRegressaoClassificacao',
+        tags: ['Machine Learning', 'Regression', 'Classification'],
+        content: {
+            pt: {
+                name: 'IA: Regressão e Classificação',
+                description: 'Projeto de Machine Learning para disciplina universitária, usando dois datasets públicos: um para regressão e outro para classificação. Inclui pré-processamento, análise exploratória, treinamento de modelos (Regressão Linear/Logística, Árvore de Decisão, SVM, MLP), avaliação e comparação.',
+            },
+            en: {
+                name: 'AI Regression and Classification',
+                description: 'Machine Learning project for university coursework, using two public datasets: one for regression and one for classification. Includes data preprocessing, exploratory analysis, model training (Linear/Logistic Regression, Decision Tree, SVM, MLP), evaluation and comparison.',
             },
         },
     }

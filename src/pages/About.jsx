@@ -26,15 +26,12 @@ const About = ({ language, t }) => {
         <div className="mt-16 grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
           {skills.map((skill) => (
             <div className="skill-card" key={skill.name}>
-              <div className="block-container w-16 h-16">
-                <div className={`btn-back rounded-xl ${skill.theme}`} />
-                <div className="btn-front rounded-xl flex justify-center items-center">
-                  {skill.imageUrl ? (
-                    <img src={skill.imageUrl} alt={skill.name} className="w-1/2 h-1/2 object-contain" />
-                  ) : (
-                    <span className="skill-initials">{skill.shortName}</span>
-                  )}
-                </div>
+              <div className="skill-icon-tile">
+                {skill.imageUrl ? (
+                  <img src={skill.imageUrl} alt={skill.name} className="w-8 h-8 object-contain" />
+                ) : (
+                  <span className="skill-initials">{skill.shortName}</span>
+                )}
               </div>
               <p className="skill-name">{skill.name}</p>
             </div>

@@ -21,6 +21,7 @@ export const translations = {
       about: 'Sobre',
       projects: 'Projetos',
       homeLabel: 'Ir para a página inicial',
+      github: 'Abrir GitHub de João Travalini',
     },
     languageSwitcher: {
       label: 'Selecionar idioma',
@@ -59,9 +60,13 @@ export const translations = {
     projects: {
       titlePrefix: 'Meus',
       titleHighlight: 'projetos',
-      intro: 'Ao longo dos anos, participei de diversos projetos que me marcaram de forma especial. Muitos deles são open-source. Se você encontrar algum projeto que desperte seu interesse, fique à vontade para explorar o código, testar e contribuir com suas ideias e melhorias. Sua colaboração será sempre muito bem-vinda e valorizada!',
-      viewMore: 'Ver mais',
-      openProject: 'Abrir projeto',
+      intro: 'Aqui estão alguns dos projetos que desenvolvi para praticar análise de dados, machine learning, desenvolvimento web, mobile e aplicações em tempo real. Alguns possuem gravações salvas no Drive para mostrar o projeto funcionando.',
+      repository: 'Repositório',
+      liveSite: 'Site',
+      recording: 'Gravação',
+      openRepository: 'Abrir repositório',
+      openLiveSite: 'Abrir site',
+      openRecording: 'Abrir gravação do projeto',
     },
     contact: {
       title: 'Entre em contato',
@@ -93,6 +98,7 @@ export const translations = {
       about: 'About',
       projects: 'Projects',
       homeLabel: 'Go to home page',
+      github: 'Open João Travalini GitHub',
     },
     languageSwitcher: {
       label: 'Select language',
@@ -131,9 +137,13 @@ export const translations = {
     projects: {
       titlePrefix: 'My',
       titleHighlight: 'projects',
-      intro: 'Over the years, I have worked on several projects that were especially meaningful to me. Many of them are open-source. If any project catches your interest, feel free to explore the code, test it, and contribute your ideas and improvements. Your collaboration is always welcome and valued!',
-      viewMore: 'View more',
-      openProject: 'Open project',
+      intro: 'Here are some of the projects I built to practice data analysis, machine learning, web development, mobile development, and realtime applications. Some include Drive recordings showing the project in action.',
+      repository: 'Repository',
+      liveSite: 'Website',
+      recording: 'Recording',
+      openRepository: 'Open repository',
+      openLiveSite: 'Open website',
+      openRecording: 'Open project recording',
     },
     contact: {
       title: 'Get in touch',

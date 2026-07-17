@@ -51,7 +51,7 @@ body:has(.card[data-color="green"]:hover) {
   }
 
   .header {
-    @apply flex justify-between items-center gap-4 sm:px-16 px-4 py-4 max-w-5xl mx-auto absolute top-0 bg-transparent z-10 right-0 left-0;
+    @apply flex justify-between items-center gap-2 sm:gap-4 sm:px-16 px-3 py-4 max-w-5xl mx-auto absolute top-0 bg-transparent z-10 right-0 left-0;
   }
 
   .footer {
@@ -103,8 +103,43 @@ body:has(.card[data-color="green"]:hover) {
   text-align: center;
 }
 
+.skill-icon-tile,
+.project-icon-tile {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  background:
+    linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%);
+  box-shadow:
+    7px 7px 0 #d8dee8,
+    0 18px 34px -26px rgba(15, 23, 42, 0.75),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.skill-card:hover .skill-icon-tile,
+.project-card:hover .project-icon-tile {
+  border-color: #94a3b8;
+  box-shadow:
+    9px 9px 0 #cbd5e1,
+    0 22px 40px -28px rgba(15, 23, 42, 0.85),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+  transform: translate(-2px, -2px);
+}
+
+.skill-icon-tile {
+  width: 64px;
+  height: 64px;
+}
+
 .skill-initials {
-  color: #102033;
+  color: #0f172a;
   font-family: "Poppins", sans-serif;
   font-size: 0.92rem;
   font-weight: 800;
@@ -118,6 +153,58 @@ body:has(.card[data-color="green"]:hover) {
   font-weight: 700;
   line-height: 1.2;
   overflow-wrap: anywhere;
+}
+
+.project-card {
+  min-width: 0;
+}
+
+.project-icon-tile {
+  width: 56px;
+  height: 56px;
+}
+
+.project-initials {
+  color: #0f172a;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.project-tag {
+  border-radius: 999px;
+  background: rgb(43 119 231 / 9%);
+  color: #1d4ed8;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1;
+  padding: 0.45rem 0.7rem;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 999px;
+  background: rgb(37 99 235 / 10%);
+  color: #2563eb;
+  font-weight: 700;
+  padding: 0.55rem 0.9rem;
+  transition: background-color 160ms ease, color 160ms ease;
+}
+
+.project-link:hover {
+  background: rgb(37 99 235 / 18%);
+}
+
+.project-link-secondary {
+  background: rgb(29 34 53 / 8%);
+  color: #1d2235;
+}
+
+.project-link-secondary:hover {
+  background: rgb(29 34 53 / 14%);
 }
 
 .flag-icon {

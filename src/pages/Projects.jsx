@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom"
 import { projects } from "../constants"
 import { arrow } from "../assets/icons"
 import CTA from "../components/CTA"
@@ -18,34 +17,53 @@ const Projects = ({ language, t }) => {
         <p>{t.projects.intro}</p>
       </div>
 
-      <div className="flex flex-wrap my-20 gap-16">
+      <div className="grid my-20 gap-12 md:grid-cols-2">
         {localizedProjects.map((project) => (
-          <div className="lg:w-[400px] w-full" key={project.name}>
-            <div className="block-container w-12 h-12">
-              <div className={`btn-back rounded-xl ${project.theme}`} />
-              <div className="btn-front rounded-xl flex justify-center items-center">
-                <img
-                  src={project.iconUrl}
-                  alt={project.name}
-                  className="w-1/2 h-1/2 object-contain"
-                />
-              </div>
+          <article className="project-card" key={project.repoLink || project.liveLink}>
+            <div className="project-icon-tile">
+              <span className="project-initials">{project.shortName}</span>
             </div>
+
             <div className="mt-5 flex flex-col">
               <h4 className="text-2xl font-poppins font-semibold">
                 {project.name}
               </h4>
-              <p className="mt-2 text-slate-500">
+              <p className="mt-3 text-slate-500">
                 {project.description}
               </p>
-              <div className="mt-5 flex items-center gap-2 font-poppins">
-                <Link to={project.link} target="_blank" rel="noopener noreferrer" className="font-semibold text-blue-600">
-                  {t.projects.viewMore}
-                </Link>
-                <img src={arrow} alt={t.projects.openProject} className="w-4 h-4 object-contain" />
+
+              <div className="mt-5 flex flex-wrap gap-2">
+                {project.tags.map((tag) => (
+                  <span className="project-tag" key={`${project.name}-${tag}`}>
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              <div className="mt-6 flex flex-wrap items-center gap-3 font-poppins">
+                {project.repoLink && (
+                  <a href={project.repoLink} target="_blank" rel="noopener noreferrer" className="project-link">
+                    {t.projects.repository}
+                    <img src={arrow} alt={t.projects.openRepository} className="w-4 h-4 object-contain" />
+                  </a>
+                )}
+
+                {project.liveLink && (
+                  <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="project-link">
+                    {t.projects.liveSite}
+                    <img src={arrow} alt={t.projects.openLiveSite} className="w-4 h-4 object-contain" />
+                  </a>
+                )}
+
+                {project.demoLink && (
+                  <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className="project-link project-link-secondary">
+                    {t.projects.recording}
+                    <img src={arrow} alt={t.projects.openRecording} className="w-4 h-4 object-contain" />
+                  </a>
+                )}
               </div>
             </div>
-          </div>
+          </article>
         ))}
       </div>
 
