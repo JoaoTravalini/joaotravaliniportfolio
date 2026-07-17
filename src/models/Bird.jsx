@@ -11,9 +11,9 @@ const Bird = () => {
 
   useEffect(() => {
     actions['Take 001'].play();
-  }, []);
+  }, [actions]);
 
-  useFrame((state, delta) => {
+  useFrame((state) => {
     const { camera, clock } = state;
 
     birdRef.current.position.y = Math.sin(clock.elapsedTime) * 0.2 + 2;

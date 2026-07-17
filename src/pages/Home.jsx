@@ -11,10 +11,8 @@ import HomeInfo from '../components/HomeInfo';
 import sakura from '../assets/sakura.mp3'
 import { soundoff, soundon } from '../assets/icons';
 
-const Home = () => {
+const Home = ({ t }) => {
   const audioRef = useRef(new Audio(sakura));
-  audioRef.current.volume = 0.4;
-  audioRef.current.loop = true;
 
   const [isRotating, setIsRotating] = useState(false);
   const [currentStage, setCurrentStage] = useState(1);
@@ -79,7 +77,7 @@ const Home = () => {
   return (
     <section className='w-full h-screen relative'>
       <div className='absolute top-28 left-0 right-0 z-10 flex items-center justify-center'>
-        {currentStage && <HomeInfo currentStage={currentStage} />}
+        {currentStage && <HomeInfo currentStage={currentStage} t={t} />}
       </div>
       <Canvas className={`w-full h-screen bg-transparent ${isRotating ? 'cursor-grabbing' : 'cursor-grab'}`} camera={{ near: 0.1, far: 1000 }}>
         <Suspense fallback={<Loader />}>
@@ -95,7 +93,7 @@ const Home = () => {
       </Canvas>
 
       <div className="absolute bottom-2 left-2">
-        <img src={!isPlayingMusic ? soundoff : soundon} alt="sound" className="w-10 h-10 cursor-pointer object-contain" onClick={() => setIsPlayingMusic(!isPlayingMusic)} />
+        <img src={!isPlayingMusic ? soundoff : soundon} alt={t.home.soundToggle} className="w-10 h-10 cursor-pointer object-contain" onClick={() => setIsPlayingMusic(!isPlayingMusic)} />
       </div>
     </section>
   )

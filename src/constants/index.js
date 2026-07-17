@@ -1,4 +1,4 @@
-import { meta, shopify, starbucks, tesla, asimovjr, eletrodenis, vail } from "../assets/images";
+import { asimovjr, eletrodenis, vail } from "../assets/images";
 import {
     car,
     contact,
@@ -111,45 +111,89 @@ export const skills = [
 
 export const experiences = [
     {
-        title: "Estagiário Técnico em Eletrônica",
         company_name: "EletroDenis LTDA",
         icon: eletrodenis,
         iconBg: "#f7e1df",
-        date: "Jan 2022 - Set 2022",
-        points: [
-            "Realização de manutenção e reparo em equipamentos eletrônicos, como televisores, caixas de som e outros dispositivos.",
-            "Diagnóstico de falhas em circuitos eletrônicos e substituição de componentes danificados.",
-            "Auxílio na montagem, testes e ajustes de equipamentos eletrônicos.",
-            "Uso de ferramentas e instrumentos de medição, como multímetro, para análise de circuitos.",
-        ],
+        content: {
+            pt: {
+                title: "Estagiário Técnico em Eletrônica",
+                date: "Jan 2022 - Set 2022",
+                points: [
+                    "Realização de manutenção e reparo em equipamentos eletrônicos, como televisores, caixas de som e outros dispositivos.",
+                    "Diagnóstico de falhas em circuitos eletrônicos e substituição de componentes danificados.",
+                    "Auxílio na montagem, testes e ajustes de equipamentos eletrônicos.",
+                    "Uso de ferramentas e instrumentos de medição, como multímetro, para análise de circuitos.",
+                ],
+            },
+            en: {
+                title: "Electronics Technician Intern",
+                date: "Jan 2022 - Sep 2022",
+                points: [
+                    "Performed maintenance and repairs on electronic equipment, including TVs, speakers, and other devices.",
+                    "Diagnosed faults in electronic circuits and replaced damaged components.",
+                    "Assisted with assembly, testing, and adjustment of electronic equipment.",
+                    "Used measurement tools and instruments, such as a multimeter, to analyze circuits.",
+                ],
+            },
+        },
     },
     {
-        title: "Gerente de projetos",
         company_name: "Asimov Jr.",
         icon: asimovjr,
         iconBg: "#d0eaf5",
-        date: "Nov 2023 - Jun 2025",
-        points: [
-            "Gerenciamento de projetos de desenvolvimento, incluindo planejamento, definição de escopo e acompanhamento de prazos.",
-            "Divisão e organização de tarefas entre membros da equipe, garantindo fluxo de trabalho eficiente.",
-            "Comunicação com clientes para levantamento de requisitos e alinhamento de expectativas.",
-            "Desenvolvimento de sites institucionais, sistemas web e aplicativos mobile.",
-            "Criação de protótipos e interfaces para validação de ideias e melhoria da experiência do usuário.",
-            "Acompanhamento do progresso das entregas e garantia da qualidade dos projetos.",
-        ],
+        content: {
+            pt: {
+                title: "Gerente de projetos",
+                date: "Nov 2023 - Jun 2025",
+                points: [
+                    "Gerenciamento de projetos de desenvolvimento, incluindo planejamento, definição de escopo e acompanhamento de prazos.",
+                    "Divisão e organização de tarefas entre membros da equipe, garantindo fluxo de trabalho eficiente.",
+                    "Comunicação com clientes para levantamento de requisitos e alinhamento de expectativas.",
+                    "Desenvolvimento de sites institucionais, sistemas web (Angular, React) e aplicativos mobile (Flutter, dart).",
+                    "Criação de protótipos e interfaces para validação de ideias e melhoria da experiência do usuário.",
+                    "Acompanhamento do progresso das entregas e garantia da qualidade dos projetos.",
+                ],
+            },
+            en: {
+                title: "Project Manager",
+                date: "Nov 2023 - Jun 2025",
+                points: [
+                    "Managed development projects, including planning, scope definition, and deadline tracking.",
+                    "Divided and organized tasks among team members, ensuring an efficient workflow.",
+                    "Communicated with clients to gather requirements and align expectations.",
+                    "Developed institutional websites, web systems (Angular, React), and mobile applications (Flutter, dart).",
+                    "Created prototypes and interfaces to validate ideas and improve the user experience.",
+                    "Monitored delivery progress and ensured project quality.",
+                ],
+            },
+        },
     },
     {
-        title: "F&B Support",
         company_name: "Vail resorts - The overlook",
         icon: vail,
         iconBg: "#b7e4c7",
-        date: "Dez 2025 - Mar 2026",
-        points: [
-            "Atendimento ao público em áreas de grande fluxo em resort de ski nos Estados Unidos (Breckenridge, Colorado), utilizando exclusivamente o idioma inglês.",
-            "Operação de caixa, realizando registro de pedidos, processamento de pagamentos e controle de transações.",
-            "Reposição e organização de materiais como copos, talheres e utensílios em áreas de atendimento.",,
-            "Suporte aos clientes, esclarecendo dúvidas e proporcionando uma experiência positiva."
-        ],
+        content: {
+            pt: {
+                title: "F&B Support",
+                date: "Dez 2025 - Mar 2026",
+                points: [
+                    "Atendimento ao público em áreas de grande fluxo em resort de ski nos Estados Unidos (Breckenridge, Colorado), utilizando exclusivamente o idioma inglês.",
+                    "Operação de caixa, realizando registro de pedidos, processamento de pagamentos e controle de transações.",
+                    "Reposição e organização de materiais como copos, talheres e utensílios em áreas de atendimento.",
+                    "Suporte aos clientes, esclarecendo dúvidas e proporcionando uma experiência positiva.",
+                ],
+            },
+            en: {
+                title: "F&B Support",
+                date: "Dec 2025 - Mar 2026",
+                points: [
+                    "Served guests in high-traffic areas at a ski resort in the United States (Breckenridge, Colorado), using English exclusively.",
+                    "Operated the cash register, recording orders, processing payments, and managing transactions.",
+                    "Restocked and organized supplies such as cups, cutlery, and utensils in service areas.",
+                    "Supported guests by answering questions and creating a positive experience.",
+                ],
+            },
+        },
     },
 ];
 
@@ -175,43 +219,91 @@ export const projects = [
     {
         iconUrl: pricewise,
         theme: 'btn-back-red',
-        name: 'Amazon Price Tracker',
-        description: 'Developed a web application that tracks and notifies users of price changes for products on Amazon, helping users find the best deals.',
         link: 'https://github.com/adrianhajdin/pricewise',
+        content: {
+            pt: {
+                name: 'Amazon Price Tracker',
+                description: 'Desenvolvi uma aplicação web que monitora produtos na Amazon e notifica usuários sobre mudanças de preço, ajudando a encontrar as melhores ofertas.',
+            },
+            en: {
+                name: 'Amazon Price Tracker',
+                description: 'Developed a web application that tracks Amazon products and notifies users of price changes, helping them find the best deals.',
+            },
+        },
     },
     {
         iconUrl: threads,
         theme: 'btn-back-green',
-        name: 'Full Stack Threads Clone',
-        description: 'Created a full-stack replica of the popular discussion platform "Threads," enabling users to post and engage in threaded conversations.',
         link: 'https://github.com/adrianhajdin/threads',
+        content: {
+            pt: {
+                name: 'Clone Full Stack do Threads',
+                description: 'Criei uma réplica full stack da plataforma de discussões Threads, permitindo que usuários publiquem e interajam em conversas encadeadas.',
+            },
+            en: {
+                name: 'Full Stack Threads Clone',
+                description: 'Created a full-stack replica of the discussion platform Threads, enabling users to post and engage in threaded conversations.',
+            },
+        },
     },
     {
         iconUrl: car,
         theme: 'btn-back-blue',
-        name: 'Car Finding App',
-        description: 'Designed and built a mobile app for finding and comparing cars on the market, streamlining the car-buying process.',
         link: 'https://github.com/adrianhajdin/project_next13_car_showcase',
+        content: {
+            pt: {
+                name: 'Aplicativo de busca de carros',
+                description: 'Projetei e construí um aplicativo para encontrar e comparar carros no mercado, simplificando o processo de compra.',
+            },
+            en: {
+                name: 'Car Finding App',
+                description: 'Designed and built an app for finding and comparing cars on the market, streamlining the car-buying process.',
+            },
+        },
     },
     {
         iconUrl: snapgram,
         theme: 'btn-back-pink',
-        name: 'Full Stack Instagram Clone',
-        description: 'Built a complete clone of Instagram, allowing users to share photos and connect with friends in a familiar social media environment.',
         link: 'https://github.com/adrianhajdin/social_media_app',
+        content: {
+            pt: {
+                name: 'Clone Full Stack do Instagram',
+                description: 'Construí um clone completo do Instagram, permitindo que usuários compartilhem fotos e se conectem em uma experiência familiar de rede social.',
+            },
+            en: {
+                name: 'Full Stack Instagram Clone',
+                description: 'Built a complete Instagram clone, allowing users to share photos and connect with friends in a familiar social media environment.',
+            },
+        },
     },
     {
         iconUrl: estate,
         theme: 'btn-back-black',
-        name: 'Real-Estate Application',
-        description: 'Developed a web application for real estate listings, facilitating property searches and connecting buyers with sellers.',
         link: 'https://github.com/adrianhajdin/projects_realestate',
+        content: {
+            pt: {
+                name: 'Aplicação imobiliária',
+                description: 'Desenvolvi uma aplicação web para listagens imobiliárias, facilitando a busca por propriedades e a conexão entre compradores e vendedores.',
+            },
+            en: {
+                name: 'Real-Estate Application',
+                description: 'Developed a web application for real estate listings, facilitating property searches and connecting buyers with sellers.',
+            },
+        },
     },
     {
         iconUrl: summiz,
         theme: 'btn-back-yellow',
-        name: 'AI Summarizer Application',
-        description: 'App that leverages AI to automatically generate concise & informative summaries from lengthy text content, or blogs.',
         link: 'https://github.com/adrianhajdin/project_ai_summarizer',
+        content: {
+            pt: {
+                name: 'Aplicação de resumo com IA',
+                description: 'Aplicação que usa IA para gerar automaticamente resumos concisos e informativos a partir de textos longos ou artigos.',
+            },
+            en: {
+                name: 'AI Summarizer Application',
+                description: 'App that leverages AI to automatically generate concise and informative summaries from lengthy text content or blog posts.',
+            },
+        },
     }
 ];

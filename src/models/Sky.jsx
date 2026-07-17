@@ -1,4 +1,4 @@
-import { meshBounds, useGLTF } from '@react-three/drei'
+import { useGLTF } from '@react-three/drei'
 import { useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
 

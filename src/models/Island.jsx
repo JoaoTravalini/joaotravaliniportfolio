@@ -9,7 +9,6 @@
  * YOU DON'T HAVE TO WRITE EVERYTHING FROM SCRATCH
  */
 
-import { a } from "@react-spring/three";
 import { useEffect, useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 import { useFrame, useThree } from "@react-three/fiber";
@@ -20,7 +19,6 @@ const Island = ({
   isRotating,
   setIsRotating,
   setCurrentStage,
-  currentFocusPoint,
   ...props
 }) => {
   const islandRef = useRef();
@@ -213,7 +211,7 @@ const Island = ({
 
   return (
     // {Island 3D model from: https://sketchfab.com/3d-models/foxs-islands-163b68e09fcc47618450150be7785907}
-    <a.group ref={islandRef} {...props}>
+    <group ref={islandRef} {...props}>
       <mesh
         geometry={nodes.polySurface944_tree_body_0.geometry}
         material={materials.PaletteMaterial001}
@@ -242,7 +240,7 @@ const Island = ({
         geometry={nodes.pCube11_rocks1_0.geometry}
         material={materials.PaletteMaterial001}
       />
-    </a.group>
+    </group>
   );
 }
 

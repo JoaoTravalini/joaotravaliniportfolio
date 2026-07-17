@@ -3,22 +3,23 @@ import { projects } from "../constants"
 import { arrow } from "../assets/icons"
 import CTA from "../components/CTA"
 
-const Projects = () => {
+const Projects = ({ language, t }) => {
+  const localizedProjects = projects.map(({ content, ...project }) => ({
+    ...project,
+    ...(content[language] || content.pt),
+  }));
+
   return (
     <section className="max-container">
       <h1 className="head-text">
-        Meus <span className="blue-gradient_text font-semibold drop-shadow">projetos</span>
+        {t.projects.titlePrefix} <span className="blue-gradient_text font-semibold drop-shadow">{t.projects.titleHighlight}</span>
       </h1>
       <div className="mt-5 flex flex-col gap-3 text-slate-500">
-        <p>
-          Ao longo dos anos, participei de diversos projetos que me marcaram de forma especial. Muitos deles são open-source.
-          Se você encontrar algum projeto que desperte seu interesse, fique à vontade para explorar o código, testar, e contribuir com suas ideias e melhorias.
-          Sua colaboração será sempre muito bem-vinda e valorizada!
-        </p>
+        <p>{t.projects.intro}</p>
       </div>
 
       <div className="flex flex-wrap my-20 gap-16">
-        {projects.map((project) => (
+        {localizedProjects.map((project) => (
           <div className="lg:w-[400px] w-full" key={project.name}>
             <div className="block-container w-12 h-12">
               <div className={`btn-back rounded-xl ${project.theme}`} />
@@ -39,9 +40,9 @@ const Projects = () => {
               </p>
               <div className="mt-5 flex items-center gap-2 font-poppins">
                 <Link to={project.link} target="_blank" rel="noopener noreferrer" className="font-semibold text-blue-600">
-                  Ver mais
+                  {t.projects.viewMore}
                 </Link>
-                <img src={arrow} alt="arrow" className="w-4 h-4 object-contain" />
+                <img src={arrow} alt={t.projects.openProject} className="w-4 h-4 object-contain" />
               </div>
             </div>
           </div>
@@ -50,7 +51,7 @@ const Projects = () => {
 
       <hr className="border-slate-200"/>
 
-      <CTA />
+      <CTA t={t} />
     </section>
   )
 }

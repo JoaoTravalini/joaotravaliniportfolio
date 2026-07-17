@@ -2,39 +2,39 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { arrow } from '../assets/icons'
 
-const InfoBox = ({ text, link, btnText }) => (
+const InfoBox = ({ text, link, btnText, arrowAlt }) => (
     <div className="info-box">
         <p className="font-medium sm:text-xl text-center">{text}</p>
         <Link to={link} className="neo-brutalism-white neo-btn">
             {btnText}
-            <img src={arrow} className="w-4 h-4 object-contain" />
+            <img src={arrow} alt={arrowAlt} className="w-4 h-4 object-contain" />
         </Link>
     </div>
 )
 
-const renderContent = {
+const getContent = (t) => ({
     1: (
-        <h1 className="sm:text-xl sm:leading-snug text-center neo-brutalism-blue py-4 px-8 text-white mx-5">
-            Olá, eu sou <span className="font-semibold">João Travalini</span> 👋
-            <br />
-            Engenheiro de computação 
-            <br />
-            <h6 className="text-xs">"Clique e arraste para explorar a ilha"</h6>
-        </h1>
+        <div className="sm:text-xl sm:leading-snug text-center neo-brutalism-blue py-4 px-8 text-white mx-5">
+            <h1>
+                {t.home.introGreeting} <span className="font-semibold">João Travalini</span>
+            </h1>
+            <p>{t.home.role}</p>
+            <p className="text-xs">"{t.home.hint}"</p>
+        </div>
     ),
     2: (
-        <InfoBox text="Construí uma base sólida através de diversas experiências profissionais e projetos práticos, principalmente atuando na empresa júnior e em trabalhos freelance" link="/about" btnText="Saiba mais"/>
+        <InfoBox text={t.home.stages[2].text} link="/about" btnText={t.home.stages[2].btnText} arrowAlt={t.common.arrowAlt} />
     ),
     3: (
-         <InfoBox text="Liderei múltiplos projetos para o sucesso ao longo dos anos. Curioso sobre o impacto?" link="/projects" btnText="Ver portfólio"/>
+        <InfoBox text={t.home.stages[3].text} link="/projects" btnText={t.home.stages[3].btnText} arrowAlt={t.common.arrowAlt} />
     ),
     4: (
-         <InfoBox text="Precisa de um projeto ou deseja entrar em contato?" link="/contact" btnText="Entrar em contato"/>
+        <InfoBox text={t.home.stages[4].text} link="/contact" btnText={t.home.stages[4].btnText} arrowAlt={t.common.arrowAlt} />
     ),
-}
+})
 
-const HomeInfo = ({ currentStage }) => {
-    return renderContent[currentStage] || null;
+const HomeInfo = ({ currentStage, t }) => {
+    return getContent(t)[currentStage] || null;
 }
 
 export default HomeInfo

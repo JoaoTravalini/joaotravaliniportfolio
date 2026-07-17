@@ -8,7 +8,7 @@ import { Loader } from '@react-three/drei';
 import Alert from '../components/Alert';
 import useAlert from '../hooks/useAlert';
 
-const Contact = () => {
+const Contact = ({ t }) => {
   const formRef = useRef(null);
   const [form, setForm] = useState({ name: '', email: '', message: '' })
   const [isLoading, setIsLoading] = useState(false);
@@ -38,7 +38,7 @@ const Contact = () => {
       import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
     ).then(() => {
       setIsLoading(false);
-      showAlert({ show: true, text: 'Mensagem enviada com sucesso!', type: 'success' })
+      showAlert({ show: true, text: t.contact.success, type: 'success' })
 
       setTimeout(() => {
         setCurrentAnimation('idle');
@@ -49,7 +49,7 @@ const Contact = () => {
       setIsLoading(false);
       setCurrentAnimation('idle');
       console.log(error);
-      showAlert({ show: true, text: 'Algo deu errado', type: 'danger' })
+      showAlert({ show: true, text: t.contact.error, type: 'danger' })
     })
   };
 
@@ -58,26 +58,26 @@ const Contact = () => {
 
   return (
     <section className="relative flex lg:flex-row flex-col max-container h-[100%]">
-      {alert.show && <Alert {...alert} />}
+      {alert.show && <Alert {...alert} t={t.alert} />}
 
       <div className="flex-1 min-w-[50%] flex flex-col">
-        <h1 className="head-text">Entre em contato</h1>
+        <h1 className="head-text">{t.contact.title}</h1>
 
-        <form className="w-full flex flex-col gap-7 mt-14" onSubmit={handleSubmit}>
+        <form ref={formRef} className="w-full flex flex-col gap-7 mt-14" onSubmit={handleSubmit}>
           <label className="text-black-500 font-semibold">
-            Nome
-            <input type="text" name="name" className="input" placeholder="Nome" required value={form.name} onChange={handleChange} onFocus={handleFocus} onBlur={handleBlur} />
+            {t.contact.nameLabel}
+            <input type="text" name="name" className="input" placeholder={t.contact.namePlaceholder} required value={form.name} onChange={handleChange} onFocus={handleFocus} onBlur={handleBlur} />
           </label>
           <label className="text-black-500 font-semibold">
-            E-mail
-            <input type="email" name="email" className="input" placeholder="E-mail" required value={form.email} onChange={handleChange} onFocus={handleFocus} onBlur={handleBlur} />
+            {t.contact.emailLabel}
+            <input type="email" name="email" className="input" placeholder={t.contact.emailPlaceholder} required value={form.email} onChange={handleChange} onFocus={handleFocus} onBlur={handleBlur} />
           </label>
           <label className="text-black-500 font-semibold">
-            Mensagem
-            <textarea name="message" rows={4} className="textarea" placeholder="Digite aqui..." required value={form.message} onChange={handleChange} onFocus={handleFocus} onBlur={handleBlur} />
+            {t.contact.messageLabel}
+            <textarea name="message" rows={4} className="textarea" placeholder={t.contact.messagePlaceholder} required value={form.message} onChange={handleChange} onFocus={handleFocus} onBlur={handleBlur} />
           </label>
           <button type="submit" className="btn" disabled={isLoading} onFocus={handleFocus} onBlur={handleBlur}>
-            {isLoading ? 'Enviando...' : 'Enviar mensagem'}
+            {isLoading ? t.contact.sending : t.contact.submit}
           </button>
         </form>
       </div>
