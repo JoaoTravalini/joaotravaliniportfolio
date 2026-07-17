@@ -94,6 +94,32 @@ body:has(.card[data-color="green"]:hover) {
     0px 1.5px 4px -1px rgba(67, 83, 255, 0.2);
 }
 
+.skill-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  text-align: center;
+}
+
+.skill-initials {
+  color: #102033;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.92rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.skill-name {
+  width: 100%;
+  color: #1d2235;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
 .flag-icon {
   position: relative;
   display: inline-block;

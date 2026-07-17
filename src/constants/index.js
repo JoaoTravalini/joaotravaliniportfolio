@@ -5,107 +5,134 @@ import {
     css,
     estate,
     express,
-    git,
     github,
     html,
     javascript,
     linkedin,
     mongodb,
-    motion,
-    mui,
-    nextjs,
-    nodejs,
     pricewise,
     react,
-    redux,
-    sass,
     snapgram,
     summiz,
-    tailwindcss,
     threads,
     typescript
 } from "../assets/icons";
 
 export const skills = [
     {
+        name: "C",
+        shortName: "C",
+        theme: "btn-back-blue",
+    },
+    {
+        name: "C++",
+        shortName: "C++",
+        theme: "btn-back-black",
+    },
+    {
         imageUrl: css,
-        name: "CSS",
-        type: "Frontend",
+        name: "CSS3",
+        theme: "btn-back-blue",
     },
     {
-        imageUrl: express,
-        name: "Express",
-        type: "Backend",
-    },
-    {
-        imageUrl: git,
-        name: "Git",
-        type: "Version Control",
-    },
-    {
-        imageUrl: github,
-        name: "GitHub",
-        type: "Version Control",
+        name: "Dart",
+        shortName: "Dart",
+        theme: "btn-back-green",
     },
     {
         imageUrl: html,
-        name: "HTML",
-        type: "Frontend",
+        name: "HTML5",
+        theme: "btn-back-orange",
+    },
+    {
+        name: "Java",
+        shortName: "Java",
+        theme: "btn-back-red",
     },
     {
         imageUrl: javascript,
         name: "JavaScript",
-        type: "Frontend",
+        theme: "btn-back-yellow",
     },
     {
-        imageUrl: mongodb,
-        name: "MongoDB",
-        type: "Database",
-    },
-    {
-        imageUrl: motion,
-        name: "Motion",
-        type: "Animation",
-    },
-    {
-        imageUrl: mui,
-        name: "Material-UI",
-        type: "Frontend",
-    },
-    {
-        imageUrl: nextjs,
-        name: "Next.js",
-        type: "Frontend",
-    },
-    {
-        imageUrl: nodejs,
-        name: "Node.js",
-        type: "Backend",
-    },
-    {
-        imageUrl: react,
-        name: "React",
-        type: "Frontend",
-    },
-    {
-        imageUrl: redux,
-        name: "Redux",
-        type: "State Management",
-    },
-    {
-        imageUrl: sass,
-        name: "Sass",
-        type: "Frontend",
-    },
-    {
-        imageUrl: tailwindcss,
-        name: "Tailwind CSS",
-        type: "Frontend",
+        name: "Python",
+        shortName: "Py",
+        theme: "btn-back-blue",
     },
     {
         imageUrl: typescript,
         name: "TypeScript",
-        type: "Frontend",
+        theme: "btn-back-blue",
+    },
+    {
+        name: "Angular",
+        shortName: "Ng",
+        theme: "btn-back-red",
+    },
+    {
+        name: "Apache Spark",
+        shortName: "Spk",
+        theme: "btn-back-orange",
+    },
+    {
+        name: "Apache Kafka",
+        shortName: "Kfk",
+        theme: "btn-back-black",
+    },
+    {
+        imageUrl: express,
+        name: "Express.js",
+        theme: "btn-back-green",
+    },
+    {
+        name: "Flutter",
+        shortName: "Fl",
+        theme: "btn-back-blue",
+    },
+    {
+        imageUrl: react,
+        name: "React",
+        theme: "btn-back-blue",
+    },
+    {
+        name: "MySQL",
+        shortName: "SQL",
+        theme: "btn-back-yellow",
+    },
+    {
+        name: "Neo4J",
+        shortName: "N4J",
+        theme: "btn-back-green",
+    },
+    {
+        name: "Postgres",
+        shortName: "Pg",
+        theme: "btn-back-blue",
+    },
+    {
+        name: "Prisma",
+        shortName: "Pr",
+        theme: "btn-back-black",
+    },
+    {
+        imageUrl: mongodb,
+        name: "MongoDB",
+        theme: "btn-back-green",
+    },
+    {
+        name: "VerilogHDL",
+        shortName: "HDL",
+        theme: "btn-back-pink",
+    },
+    {
+        name: "FPGA",
+        shortName: "FPGA",
+        theme: "btn-back-yellow",
+    },
+    {
+        name: "Embedded Systems",
+        shortName: "EMB",
+        theme: "btn-back-orange",
     }
 ];
 
