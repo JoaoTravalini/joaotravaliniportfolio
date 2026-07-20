@@ -1,4 +1,33 @@
-import { asimovjr, eletrodenis, vail } from "../assets/images";
+import {
+    angularLogo,
+    apacheKafkaLogo,
+    apacheSparkLogo,
+    appdespesas,
+    asimovjr,
+    cLogo,
+    cppLogo,
+    dartLogo,
+    eletrodenis,
+    embeddedSystemsLogo,
+    flutterLogo,
+    fpgaLogo,
+    iaregclas,
+    javaLogo,
+    loginpage,
+    mysqlLogo,
+    nba,
+    neo4jLogo,
+    pokedex,
+    postgresLogo,
+    prismaLogo,
+    proescolaformulario,
+    pythonLogo,
+    realtimechat,
+    rickandmorty,
+    siteasimovjr,
+    vail,
+    verilogHdlLogo
+} from "../assets/images";
 import {
     contact,
     css,
@@ -14,11 +43,13 @@ import {
 
 export const skills = [
     {
+        imageUrl: cLogo,
         name: "C",
         shortName: "C",
         theme: "btn-back-blue",
     },
     {
+        imageUrl: cppLogo,
         name: "C++",
         shortName: "C++",
         theme: "btn-back-black",
@@ -29,6 +60,7 @@ export const skills = [
         theme: "btn-back-blue",
     },
     {
+        imageUrl: dartLogo,
         name: "Dart",
         shortName: "Dart",
         theme: "btn-back-green",
@@ -39,6 +71,7 @@ export const skills = [
         theme: "btn-back-orange",
     },
     {
+        imageUrl: javaLogo,
         name: "Java",
         shortName: "Java",
         theme: "btn-back-red",
@@ -49,6 +82,7 @@ export const skills = [
         theme: "btn-back-yellow",
     },
     {
+        imageUrl: pythonLogo,
         name: "Python",
         shortName: "Py",
         theme: "btn-back-blue",
@@ -59,16 +93,19 @@ export const skills = [
         theme: "btn-back-blue",
     },
     {
+        imageUrl: angularLogo,
         name: "Angular",
         shortName: "Ng",
         theme: "btn-back-red",
     },
     {
+        imageUrl: apacheSparkLogo,
         name: "Apache Spark",
         shortName: "Spk",
         theme: "btn-back-orange",
     },
     {
+        imageUrl: apacheKafkaLogo,
         name: "Apache Kafka",
         shortName: "Kfk",
         theme: "btn-back-black",
@@ -79,6 +116,7 @@ export const skills = [
         theme: "btn-back-green",
     },
     {
+        imageUrl: flutterLogo,
         name: "Flutter",
         shortName: "Fl",
         theme: "btn-back-blue",
@@ -89,21 +127,25 @@ export const skills = [
         theme: "btn-back-blue",
     },
     {
+        imageUrl: mysqlLogo,
         name: "MySQL",
         shortName: "SQL",
         theme: "btn-back-yellow",
     },
     {
+        imageUrl: neo4jLogo,
         name: "Neo4J",
         shortName: "N4J",
         theme: "btn-back-green",
     },
     {
+        imageUrl: postgresLogo,
         name: "Postgres",
         shortName: "Pg",
         theme: "btn-back-blue",
     },
     {
+        imageUrl: prismaLogo,
         name: "Prisma",
         shortName: "Pr",
         theme: "btn-back-black",
@@ -114,16 +156,19 @@ export const skills = [
         theme: "btn-back-green",
     },
     {
+        imageUrl: verilogHdlLogo,
         name: "VerilogHDL",
         shortName: "HDL",
         theme: "btn-back-pink",
     },
     {
+        imageUrl: fpgaLogo,
         name: "FPGA",
         shortName: "FPGA",
         theme: "btn-back-yellow",
     },
     {
+        imageUrl: embeddedSystemsLogo,
         name: "Embedded Systems",
         shortName: "EMB",
         theme: "btn-back-orange",
@@ -240,6 +285,8 @@ export const projects = [
     {
         theme: 'btn-back-blue',
         shortName: 'NBA',
+        category: 'dataAi',
+        imageUrl: nba,
         repoLink: 'https://github.com/JoaoTravalini/projeto_python_2',
         tags: ['Python', 'Pandas', 'Scikit-learn', 'PCA', 'K-Means'],
         content: {
@@ -256,6 +303,8 @@ export const projects = [
     {
         theme: 'btn-back-red',
         shortName: 'LP',
+        category: 'webFullstack',
+        imageUrl: loginpage,
         repoLink: 'https://github.com/JoaoTravalini/loginpage',
         demoLink: 'https://drive.google.com/file/d/13BfyTgHKl9UJLliVg46s5Cp5J4Xsl1cx/view',
         tags: ['Angular', 'TypeScript', 'CSS'],
@@ -273,6 +322,8 @@ export const projects = [
     {
         theme: 'btn-back-green',
         shortName: 'APP',
+        category: 'mobile',
+        imageUrl: appdespesas,
         repoLink: 'https://github.com/JoaoTravalini/appdespesaspessoais',
         demoLink: 'https://drive.google.com/file/d/1MFqou7_WPynJjIy5-6iQrN6BOHECl9mw/view',
         tags: ['Flutter', 'Dart', 'Mobile'],
@@ -290,6 +341,8 @@ export const projects = [
     {
         theme: 'btn-back-yellow',
         shortName: 'CHAT',
+        category: 'webFullstack',
+        imageUrl: realtimechat,
         repoLink: 'https://github.com/JoaoTravalini/realtimechat',
         demoLink: 'https://drive.google.com/file/d/19qf698F1Qzh3lBBzyJwNvO5b-JzbGilH/view',
         tags: ['Angular', 'TypeScript', 'Socket.io'],
@@ -307,6 +360,8 @@ export const projects = [
     {
         theme: 'btn-back-pink',
         shortName: 'PKX',
+        category: 'webFullstack',
+        imageUrl: pokedex,
         repoLink: 'https://github.com/JoaoTravalini/pokedex',
         demoLink: 'https://drive.google.com/file/d/1lySm2I3GCtSge6VoE5bmNyiwJykB6ULM/view',
         tags: ['Angular', 'TypeScript', 'API'],
@@ -324,6 +379,9 @@ export const projects = [
     {
         theme: 'btn-back-green',
         shortName: 'ASI',
+        category: 'webFullstack',
+        imageUrl: siteasimovjr,
+        imageFit: 'cover',
         liveLink: 'https://asimovjr.com.br',
         tags: ['WordPress', 'Institutional Website', 'Junior Enterprise'],
         content: {
@@ -338,8 +396,48 @@ export const projects = [
         },
     },
     {
+        theme: 'btn-back-yellow',
+        shortName: 'R&M',
+        category: 'software',
+        imageUrl: rickandmorty,
+        imageFit: 'cover',
+        repoLink: 'https://github.com/JoaoTravalini/RickAndMorty',
+        tags: ['Java', 'UML', 'Software Design'],
+        content: {
+            pt: {
+                name: 'Rick and Morty',
+                description: 'Projeto de software Rick and Morty desenvolvido em Java, com diagrama UML criado por mim para representar a estrutura e o desenho da aplicação.',
+            },
+            en: {
+                name: 'Rick and Morty',
+                description: 'Rick and Morty software project built in Java, with a UML diagram created by me to represent the application structure and design.',
+            },
+        },
+    },
+    {
+        theme: 'btn-back-blue',
+        shortName: 'PRO',
+        category: 'webFullstack',
+        imageUrl: proescolaformulario,
+        imageFit: 'cover',
+        repoLink: 'https://github.com/JoaoTravalini/formulario-contato',
+        tags: ['React', 'TypeScript', 'Material UI', 'Fastify', 'Prisma', 'PostgreSQL', 'JWT'],
+        content: {
+            pt: {
+                name: 'ProEscola',
+                description: 'Plataforma full-stack de gestão escolar desenvolvida com React, TypeScript, Material UI, Fastify, Prisma, PostgreSQL e autenticação JWT. Inclui operações CRUD e integração com API REST.',
+            },
+            en: {
+                name: 'ProEscola',
+                description: 'Full-stack school management platform built with React, TypeScript, Material UI, Fastify, Prisma, PostgreSQL, and JWT authentication. Includes CRUD operations and REST API integration.',
+            },
+        },
+    },
+    {
         theme: 'btn-back-black',
         shortName: 'ML',
+        category: 'dataAi',
+        imageUrl: iaregclas,
         repoLink: 'https://github.com/JoaoTravalini/IaRegressaoClassificacao',
         tags: ['Machine Learning', 'Regression', 'Classification'],
         content: {

@@ -1,12 +1,21 @@
+import { useState } from "react"
 import { projects } from "../constants"
 import { arrow } from "../assets/icons"
 import CTA from "../components/CTA"
 
+const projectFilters = ['all', 'webFullstack', 'mobile', 'dataAi', 'software'];
+
 const Projects = ({ language, t }) => {
+  const [activeFilter, setActiveFilter] = useState('all');
+
   const localizedProjects = projects.map(({ content, ...project }) => ({
     ...project,
     ...(content[language] || content.pt),
   }));
+
+  const filteredProjects = activeFilter === 'all'
+    ? localizedProjects
+    : localizedProjects.filter((project) => project.category === activeFilter);
 
   return (
     <section className="max-container">
@@ -17,11 +26,29 @@ const Projects = ({ language, t }) => {
         <p>{t.projects.intro}</p>
       </div>
 
-      <div className="grid my-20 gap-12 md:grid-cols-2">
-        {localizedProjects.map((project) => (
+      <div className="project-filter-tabs" aria-label={t.projects.filterLabel}>
+        {projectFilters.map((filter) => (
+          <button
+            key={filter}
+            type="button"
+            className={`project-filter-tab ${activeFilter === filter ? 'project-filter-tab-active' : ''}`}
+            aria-pressed={activeFilter === filter}
+            onClick={() => setActiveFilter(filter)}
+          >
+            {t.projects.filters[filter]}
+          </button>
+        ))}
+      </div>
+
+      <div className="grid mt-12 mb-20 gap-12 md:grid-cols-2">
+        {filteredProjects.map((project) => (
           <article className="project-card" key={project.repoLink || project.liveLink}>
-            <div className="project-icon-tile">
-              <span className="project-initials">{project.shortName}</span>
+            <div className="project-image-frame">
+              <img
+                src={project.imageUrl}
+                alt={project.name}
+                className={`project-image ${project.imageFit === 'cover' ? 'project-image-cover' : ''}`}
+              />
             </div>
 
             <div className="mt-5 flex flex-col">

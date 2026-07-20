@@ -67,6 +67,14 @@ export const translations = {
       openRepository: 'Abrir repositório',
       openLiveSite: 'Abrir site',
       openRecording: 'Abrir gravação do projeto',
+      filterLabel: 'Filtrar projetos por categoria',
+      filters: {
+        all: 'Todos',
+        webFullstack: 'Web e Full-stack',
+        mobile: 'Mobile',
+        dataAi: 'Dados e IA',
+        software: 'Software',
+      },
     },
     contact: {
       title: 'Entre em contato',
@@ -144,6 +152,14 @@ export const translations = {
       openRepository: 'Open repository',
       openLiveSite: 'Open website',
       openRecording: 'Open project recording',
+      filterLabel: 'Filter projects by category',
+      filters: {
+        all: 'All',
+        webFullstack: 'Web and Full-stack',
+        mobile: 'Mobile',
+        dataAi: 'Data and AI',
+        software: 'Software',
+      },
     },
     contact: {
       title: 'Get in touch',
