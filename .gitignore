@@ -26,4 +26,24 @@ dist-ssr
 # env files
 .env
 .env.local
+.env.*
+!.env.example
 .env.*.local
+
+# local runtime artifacts
+.codex-vite*.err
+.npm-cache/
+
+# secrets and certificates
+*.key
+*.pem
+*.p12
+*.pfx
+*.crt
+*.cer
+*.jks
+*.keystore
+*.bak
+*.backup
+*.dump
+*.sql

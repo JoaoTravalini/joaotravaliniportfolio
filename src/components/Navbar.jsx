@@ -1,8 +1,12 @@
+import { memo } from "react"
 import { NavLink } from "react-router-dom"
 import { languages } from "../i18n"
 import { github } from "../assets/icons"
+import { getSafeExternalUrl } from "../utils/security.js"
 
-const Navbar = ({ language, setLanguage, t }) => {
+const githubUrl = getSafeExternalUrl('https://github.com/JoaoTravalini');
+
+const Navbar = memo(({ language, setLanguage, t }) => {
   const getLinkClassName = ({ isActive }) => isActive ? 'text-blue-500' : 'text-black';
 
   return (
@@ -27,9 +31,10 @@ const Navbar = ({ language, setLanguage, t }) => {
 
         <div className="flex shrink-0 items-center gap-1.5 sm:gap-2">
           <a
-            href="https://github.com/JoaoTravalini"
+            href={githubUrl}
             target="_blank"
             rel="noopener noreferrer"
+            referrerPolicy="no-referrer"
             className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-white/85 shadow-md backdrop-blur-md transition hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-500"
             aria-label={t.nav.github}
             title="GitHub"
@@ -40,6 +45,7 @@ const Navbar = ({ language, setLanguage, t }) => {
           <div
             className="flex items-center gap-1 rounded-full bg-white/85 px-1 py-0.5 sm:px-1.5 sm:py-1 shadow-md backdrop-blur-md"
             aria-label={t.languageSwitcher.label}
+            role="group"
           >
             {languages.map((item) => {
               const isActive = item.code === language;
@@ -64,6 +70,8 @@ const Navbar = ({ language, setLanguage, t }) => {
       </div>
     </header>
   )
-}
+});
+
+Navbar.displayName = 'Navbar';
 
 export default Navbar

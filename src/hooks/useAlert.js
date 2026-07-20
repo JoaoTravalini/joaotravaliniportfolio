@@ -1,19 +1,19 @@
-import { useState } from 'react'
+import { useCallback, useState } from 'react'
 
 const useAlert = () => {
     const [alert, setAlert] = useState({ show: false, text: '', type: 'danger' })
 
-    const showAlert = ({ text, type = 'danger' }) => setAlert({
+    const showAlert = useCallback(({ text, type = 'danger' }) => setAlert({
         show: true,
         text,
         type
-    })
+    }), [])
 
-    const hideAlert = () => setAlert({
+    const hideAlert = useCallback(() => setAlert({
         show: false,
         text: '',
         type: 'danger'
-    })
+    }), [])
 
     return { alert, showAlert, hideAlert }
 }

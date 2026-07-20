@@ -1,12 +1,6 @@
 import vail from './vail.png'
 import eletrodenis from './eletrodenis.png'
 import asimovjr from './asimovjr.png'
-import hero from './hero.jpg'
-import meta from './meta.png'
-import shopify from './shopify.png'
-import starbucks from './starbucks.png'
-import tesla from './tesla.png'
-import logo from './logo.svg'
 import nba from './NBA.png'
 import loginpage from './loginpage.png'
 import appdespesas from './appdespesas.png'
@@ -37,12 +31,6 @@ export {
     vail,
     eletrodenis,
     asimovjr,
-    hero,
-    meta,
-    shopify,
-    starbucks,
-    tesla,
-    logo,
     nba,
     loginpage,
     appdespesas,

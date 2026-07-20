@@ -1,8 +1,8 @@
-import React from 'react'
+import { memo } from 'react'
 import { Link } from 'react-router-dom'
 import { arrow } from '../assets/icons'
 
-const InfoBox = ({ text, link, btnText, arrowAlt }) => (
+const InfoBox = memo(({ text, link, btnText, arrowAlt }) => (
     <div className="info-box">
         <p className="font-medium sm:text-xl text-center">{text}</p>
         <Link to={link} className="neo-brutalism-white neo-btn">
@@ -10,7 +10,9 @@ const InfoBox = ({ text, link, btnText, arrowAlt }) => (
             <img src={arrow} alt={arrowAlt} className="w-4 h-4 object-contain" />
         </Link>
     </div>
-)
+));
+
+InfoBox.displayName = 'InfoBox';
 
 const getContent = (t) => ({
     1: (
@@ -37,4 +39,4 @@ const HomeInfo = ({ currentStage, t }) => {
     return getContent(t)[currentStage] || null;
 }
 
-export default HomeInfo
+export default memo(HomeInfo)

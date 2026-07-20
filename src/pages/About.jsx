@@ -1,3 +1,4 @@
+import { useMemo } from 'react';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 
@@ -5,11 +6,48 @@ import { skills, experiences } from '../constants';
 
 import CTA from '../components/CTA.jsx'
 
+const skillGroupDefinitions = [
+  {
+    id: 'languages',
+    skills: ['C', 'C++', 'Dart', 'Java', 'JavaScript', 'Python', 'TypeScript', 'VerilogHDL'],
+  },
+  {
+    id: 'frontendMobile',
+    skills: ['HTML5', 'CSS3', 'Angular', 'Flutter', 'React'],
+  },
+  {
+    id: 'backendData',
+    skills: ['Express.js', 'Apache Spark', 'Apache Kafka'],
+  },
+  {
+    id: 'databases',
+    skills: ['MySQL', 'Neo4J', 'Postgres', 'Prisma', 'MongoDB'],
+  },
+  {
+    id: 'hardware',
+    skills: ['FPGA', 'Embedded Systems'],
+  },
+];
+
 const About = ({ language, t }) => {
-  const localizedExperiences = experiences.map(({ content, ...experience }) => ({
-    ...experience,
-    ...(content[language] || content.pt),
-  }));
+  const localizedExperiences = useMemo(
+    () => experiences.map(({ content, ...experience }) => ({
+      ...experience,
+      ...(content[language] || content.pt),
+    })),
+    [language]
+  );
+
+  const groupedSkills = useMemo(
+    () => skillGroupDefinitions.map((group) => ({
+      ...group,
+      title: t.about.skillGroups[group.id],
+      skills: group.skills
+        .map((skillName) => skills.find((skill) => skill.name === skillName))
+        .filter(Boolean),
+    })),
+    [t]
+  );
 
   return (
     <section className="max-container">
@@ -23,17 +61,30 @@ const About = ({ language, t }) => {
       <div className="py-10 flex flex-col">
         <h3 className="subhead-text">{t.about.skillsTitle}</h3>
 
-        <div className="mt-16 grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
-          {skills.map((skill) => (
-            <div className="skill-card" key={skill.name}>
-              <div className="skill-icon-tile">
-                {skill.imageUrl ? (
-                  <img src={skill.imageUrl} alt={skill.name} className="w-8 h-8 object-contain" />
-                ) : (
-                  <span className="skill-initials">{skill.shortName}</span>
-                )}
+        <div className="mt-12 flex flex-col gap-8">
+          {groupedSkills.map((group) => (
+            <div className="skill-group" key={group.id}>
+              <h4 className="skill-group-title">{group.title}</h4>
+              <div className="skill-grid">
+                {group.skills.map((skill) => (
+                  <div className="skill-card" key={skill.name}>
+                    <div className="skill-icon-tile">
+                      {skill.imageUrl ? (
+                        <img
+                          src={skill.imageUrl}
+                          alt={skill.name}
+                          className="h-8 w-8 object-contain"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      ) : (
+                        <span className="skill-initials">{skill.shortName}</span>
+                      )}
+                    </div>
+                    <p className="skill-name">{skill.name}</p>
+                  </div>
+                ))}
               </div>
-              <p className="skill-name">{skill.name}</p>
             </div>
           ))}
         </div>
@@ -48,7 +99,7 @@ const About = ({ language, t }) => {
         <div className="mt-12 flex">
           <VerticalTimeline>
             {localizedExperiences.map((experience) => (
-              <VerticalTimelineElement key={experience.company_name} date={experience.date} icon={<div className="flex justify-center items-center w-full h-full"><img src={experience.icon} alt={experience.company_name} className="w-[60%] h-[60%] object-contain" /></div>} iconStyle={{ background: experience.iconBg }} contentStyle={{borderBottom: '8px', borderStyle: 'solid', borderBottomColor: experience.iconBg, boxShadow: 'none',}}>
+              <VerticalTimelineElement key={experience.company_name} date={experience.date} icon={<div className="flex justify-center items-center w-full h-full"><img src={experience.icon} alt={experience.company_name} className="w-[60%] h-[60%] object-contain" loading="lazy" decoding="async" /></div>} iconStyle={{ background: experience.iconBg }} contentStyle={{borderBottom: '8px', borderStyle: 'solid', borderBottomColor: experience.iconBg, boxShadow: 'none',}}>
                 <div>
                   <h3 className="text-black text-xl font-poppins font-semibold">
                     {experience.title}

@@ -29,13 +29,10 @@ import {
     verilogHdlLogo
 } from "../assets/images";
 import {
-    contact,
     css,
     express,
-    github,
     html,
     javascript,
-    linkedin,
     mongodb,
     react,
     typescript
@@ -261,24 +258,6 @@ export const experiences = [
             },
         },
     },
-];
-
-export const socialLinks = [
-    {
-        name: 'Contact',
-        iconUrl: contact,
-        link: '/contact',
-    },
-    {
-        name: 'GitHub',
-        iconUrl: github,
-        link: 'https://github.com/JoaoTravalini',
-    },
-    {
-        name: 'LinkedIn',
-        iconUrl: linkedin,
-        link: 'https://www.linkedin.com/in/YourLinkedInUsername',
-    }
 ];
 
 export const projects = [

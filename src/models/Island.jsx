@@ -9,7 +9,7 @@
  * YOU DON'T HAVE TO WRITE EVERYTHING FROM SCRATCH
  */
 
-import { useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 import { useFrame, useThree } from "@react-three/fiber";
 
@@ -30,11 +30,19 @@ const Island = ({
   const lastX = useRef(0);
   // Use a ref for rotation speed
   const rotationSpeed = useRef(0);
+  const currentStageRef = useRef(1);
   // Define a damping factor to control rotation damping
   const dampingFactor = 0.95;
 
+  const updateCurrentStage = useCallback((nextStage) => {
+    if (currentStageRef.current !== nextStage) {
+      currentStageRef.current = nextStage;
+      setCurrentStage(nextStage);
+    }
+  }, [setCurrentStage]);
+
   // Handle pointer (mouse or touch) down event
-  const handlePointerDown = (event) => {
+  const handlePointerDown = useCallback((event) => {
     event.stopPropagation();
     event.preventDefault();
     setIsRotating(true);
@@ -44,17 +52,17 @@ const Island = ({
 
     // Store the current clientX position for reference
     lastX.current = clientX;
-  };
+  }, [setIsRotating]);
 
   // Handle pointer (mouse or touch) up event
-  const handlePointerUp = (event) => {
+  const handlePointerUp = useCallback((event) => {
     event.stopPropagation();
     event.preventDefault();
     setIsRotating(false);
-  };
+  }, [setIsRotating]);
 
   // Handle pointer (mouse or touch) move event
-  const handlePointerMove = (event) => {
+  const handlePointerMove = useCallback((event) => {
     event.stopPropagation();
     event.preventDefault();
     if (isRotating) {
@@ -74,10 +82,10 @@ const Island = ({
       // Update the rotation speed
       rotationSpeed.current = delta * 0.01 * Math.PI;
     }
-  };
+  }, [isRotating, viewport.width]);
 
   // Handle keydown events
-  const handleKeyDown = (event) => {
+  const handleKeyDown = useCallback((event) => {
     if (event.key === "ArrowLeft") {
       if (!isRotating) setIsRotating(true);
 
@@ -89,32 +97,32 @@ const Island = ({
       islandRef.current.rotation.y -= 0.005 * Math.PI;
       rotationSpeed.current = -0.007;
     }
-  };
+  }, [isRotating, setIsRotating]);
 
   // Handle keyup events
-  const handleKeyUp = (event) => {
+  const handleKeyUp = useCallback((event) => {
     if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
       setIsRotating(false);
     }
-  };
+  }, [setIsRotating]);
 
   // Touch events for mobile devices
-  const handleTouchStart = (e) => {
+  const handleTouchStart = useCallback((e) => {
     e.stopPropagation();
     e.preventDefault();
     setIsRotating(true);
   
     const clientX = e.touches ? e.touches[0].clientX : e.clientX;
     lastX.current = clientX;
-  }
+  }, [setIsRotating]);
   
-  const handleTouchEnd = (e) => {
+  const handleTouchEnd = useCallback((e) => {
     e.stopPropagation();
     e.preventDefault();
     setIsRotating(false);
-  }
+  }, [setIsRotating]);
   
-  const handleTouchMove = (e) => {
+  const handleTouchMove = useCallback((e) => {
     e.stopPropagation();
     e.preventDefault();
   
@@ -126,7 +134,7 @@ const Island = ({
       lastX.current = clientX;
       rotationSpeed.current = delta * 0.01 * Math.PI;
     }
-  }
+  }, [isRotating, viewport.width]);
 
   useEffect(() => {
     // Add event listeners for pointer and keyboard events
@@ -151,7 +159,17 @@ const Island = ({
       canvas.removeEventListener("touchend", handleTouchEnd);
       canvas.removeEventListener("touchmove", handleTouchMove);
     };
-  }, [gl, handlePointerDown, handlePointerUp, handlePointerMove]);
+  }, [
+    gl,
+    handleKeyDown,
+    handleKeyUp,
+    handlePointerDown,
+    handlePointerMove,
+    handlePointerUp,
+    handleTouchEnd,
+    handleTouchMove,
+    handleTouchStart,
+  ]);
 
   // This function is called on each frame update
   useFrame(() => {
@@ -192,19 +210,19 @@ const Island = ({
       // Set the current stage based on the island's orientation
       switch (true) {
         case normalizedRotation >= 5.45 && normalizedRotation <= 5.85:
-          setCurrentStage(4);
+          updateCurrentStage(4);
           break;
         case normalizedRotation >= 0.85 && normalizedRotation <= 1.3:
-          setCurrentStage(3);
+          updateCurrentStage(3);
           break;
         case normalizedRotation >= 2.4 && normalizedRotation <= 2.6:
-          setCurrentStage(2);
+          updateCurrentStage(2);
           break;
         case normalizedRotation >= 4.25 && normalizedRotation <= 4.75:
-          setCurrentStage(1);
+          updateCurrentStage(1);
           break;
         default:
-          setCurrentStage(null);
+          updateCurrentStage(null);
       }
     }
   });

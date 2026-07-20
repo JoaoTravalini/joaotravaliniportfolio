@@ -17,6 +17,23 @@ export const languages = [
 
 export const translations = {
   pt: {
+    meta: {
+      siteName: 'João Travalini',
+      title: 'João Travalini | Desenvolvedor Full-stack e Engenheiro de Computação',
+      description: 'Portfólio de João Travalini, desenvolvedor com projetos em React, TypeScript, Angular, Flutter, Python, Machine Learning, bancos de dados e sistemas embarcados.',
+      pages: {
+        home: 'Início',
+        about: 'Sobre',
+        projects: 'Projetos',
+        contact: 'Contato',
+      },
+      descriptions: {
+        home: 'Portfólio de João Travalini com experiências, habilidades e projetos em desenvolvimento web, dados, mobile e sistemas embarcados.',
+        about: 'Conheça a trajetória, experiências profissionais e habilidades técnicas de João Travalini.',
+        projects: 'Projetos reais e acadêmicos de João Travalini em web, full-stack, mobile, dados, IA e software.',
+        contact: 'Entre em contato com João Travalini para oportunidades profissionais, projetos ou colaboração.',
+      },
+    },
     nav: {
       about: 'Sobre',
       projects: 'Projetos',
@@ -54,6 +71,13 @@ export const translations = {
       greeting: 'Olá, eu sou',
       summary: 'Engenheiro de Computação brasileiro, focado no desenvolvimento de aplicações modernas e na criação de soluções inovadoras por meio de projetos práticos.',
       skillsTitle: 'Minhas habilidades',
+      skillGroups: {
+        languages: 'Linguagens',
+        frontendMobile: 'Front-end e mobile',
+        backendData: 'Back-end, dados e mensageria',
+        databases: 'Bancos de dados',
+        hardware: 'Hardware e sistemas embarcados',
+      },
       experienceTitle: 'Experiência profissional',
       experienceIntro: 'Tive diversas experiências profissionais e desenvolvi minhas habilidades por meio de projetos práticos, colaborando com diferentes pessoas e contextos. Aqui está um resumo:',
     },
@@ -64,6 +88,7 @@ export const translations = {
       repository: 'Repositório',
       liveSite: 'Site',
       recording: 'Gravação',
+      technologiesLabel: 'Tecnologias utilizadas',
       openRepository: 'Abrir repositório',
       openLiveSite: 'Abrir site',
       openRecording: 'Abrir gravação do projeto',
@@ -88,6 +113,10 @@ export const translations = {
       sending: 'Enviando...',
       success: 'Mensagem enviada com sucesso!',
       error: 'Algo deu errado',
+      validation: {
+        invalid: 'Revise os campos antes de enviar.',
+        cooldown: 'Aguarde alguns segundos antes de enviar novamente.',
+      },
     },
     cta: {
       text: 'Tem um projeto em mente ou deseja entrar em contato?',
@@ -99,9 +128,27 @@ export const translations = {
     },
     common: {
       arrowAlt: 'seta',
+      loading: 'Carregando página',
     },
   },
   en: {
+    meta: {
+      siteName: 'João Travalini',
+      title: 'João Travalini | Full-stack Developer and Computer Engineer',
+      description: 'Portfolio of João Travalini, a developer with projects in React, TypeScript, Angular, Flutter, Python, Machine Learning, databases, and embedded systems.',
+      pages: {
+        home: 'Home',
+        about: 'About',
+        projects: 'Projects',
+        contact: 'Contact',
+      },
+      descriptions: {
+        home: 'João Travalini portfolio with experience, skills, and projects in web development, data, mobile, and embedded systems.',
+        about: 'Learn about João Travalini career path, professional experience, and technical skills.',
+        projects: 'Real and academic projects by João Travalini across web, full-stack, mobile, data, AI, and software.',
+        contact: 'Contact João Travalini for professional opportunities, projects, or collaboration.',
+      },
+    },
     nav: {
       about: 'About',
       projects: 'Projects',
@@ -139,6 +186,13 @@ export const translations = {
       greeting: "Hi, I'm",
       summary: 'Brazilian Computer Engineer focused on building modern applications and creating innovative solutions through practical projects.',
       skillsTitle: 'My skills',
+      skillGroups: {
+        languages: 'Languages',
+        frontendMobile: 'Front-end and mobile',
+        backendData: 'Back-end, data and messaging',
+        databases: 'Databases',
+        hardware: 'Hardware and embedded systems',
+      },
       experienceTitle: 'Professional experience',
       experienceIntro: 'I have gained professional experience and developed my skills through practical projects, collaborating with different people and contexts. Here is a summary:',
     },
@@ -149,6 +203,7 @@ export const translations = {
       repository: 'Repository',
       liveSite: 'Website',
       recording: 'Recording',
+      technologiesLabel: 'Technologies used',
       openRepository: 'Open repository',
       openLiveSite: 'Open website',
       openRecording: 'Open project recording',
@@ -173,6 +228,10 @@ export const translations = {
       sending: 'Sending...',
       success: 'Message sent successfully!',
       error: 'Something went wrong',
+      validation: {
+        invalid: 'Please review the fields before sending.',
+        cooldown: 'Please wait a few seconds before sending again.',
+      },
     },
     cta: {
       text: 'Have a project in mind or want to get in touch?',
@@ -184,6 +243,7 @@ export const translations = {
     },
     common: {
       arrowAlt: 'arrow',
+      loading: 'Loading page',
     },
   },
 };
