@@ -12,6 +12,7 @@ import {
     flutterLogo,
     fpgaLogo,
     iaregclas,
+    industrialFleetIntelligence,
     javaLogo,
     loginpage,
     mysqlLogo,
@@ -261,6 +262,54 @@ export const experiences = [
 ];
 
 export const projects = [
+    {
+        theme: 'btn-back-black',
+        shortName: 'IFI',
+        category: 'dataAi',
+        featured: true,
+        status: 'completed',
+        imageUrl: industrialFleetIntelligence,
+        repoLink: 'https://github.com/JoaoTravalini/industrial-fleet-intelligence',
+        demoLink: 'https://www.youtube.com/watch?v=Tntl_y1lTm0',
+        tags: ['Python', 'Apache Spark', 'Kafka', 'FastAPI', 'React', 'PostgreSQL', 'Ollama'],
+        content: {
+            pt: {
+                name: 'Industrial Fleet Intelligence',
+                demoLabel: 'Vídeo no YouTube',
+                openDemoLabel: 'Abrir demonstração no YouTube',
+                description: 'Plataforma industrial local-first de Dados e IA com ativos fictícios, telemetria sintética determinística, dataset público AI4I, pipelines locais, backend FastAPI read-only, dashboard React e copiloto de IA com Ollama. Projeto independente, sem dados proprietários ou vínculo com fabricantes.',
+            },
+            en: {
+                name: 'Industrial Fleet Intelligence',
+                demoLabel: 'YouTube demo',
+                openDemoLabel: 'Open YouTube demo',
+                description: 'Local-first industrial Data and AI platform using fictional fleet assets, deterministic synthetic telemetry, the public AI4I predictive-maintenance dataset, local data pipelines, a read-only FastAPI backend, a React dashboard, and an Ollama-backed AI Copilot. Independent project with no proprietary manufacturer data.',
+            },
+        },
+    },
+    {
+        theme: 'btn-back-blue',
+        shortName: 'SCS',
+        category: 'dataAi',
+        featured: true,
+        status: 'inProgress',
+        repoLink: 'https://github.com/JoaoTravalini/supply-chain-risk-intelligence',
+        tags: ['Python', 'GCP', 'BigQuery', 'Pub/Sub', 'LangGraph', 'Streamlit', 'OpenTofu'],
+        content: {
+            pt: {
+                name: 'SupplyChain Sentinel',
+                visualTitle: 'Arquitetura cloud-native',
+                visualItems: ['Sinais externos', 'Pub/Sub + BigQuery', 'Score determinístico', 'IA investigativa'],
+                description: 'Projeto em andamento de inteligência de risco para supply chain, com dados sintéticos realistas de fornecedores, sinais externos de risco, preservação de proveniência, scores determinísticos e IA agentic para investigar e explicar evidências sem tornar o LLM a fonte da verdade de negócio.',
+            },
+            en: {
+                name: 'SupplyChain Sentinel',
+                visualTitle: 'Cloud-native architecture',
+                visualItems: ['External signals', 'Pub/Sub + BigQuery', 'Deterministic score', 'Investigative AI'],
+                description: 'In-progress cloud-native supply-chain risk intelligence project combining synthetic but realistic supplier operational data with external risk signals, provenance preservation, deterministic supplier risk scoring, and agentic AI that investigates evidence without becoming the source of business truth.',
+            },
+        },
+    },
     {
         theme: 'btn-back-blue',
         shortName: 'NBA',

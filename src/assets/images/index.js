@@ -8,6 +8,7 @@ import realtimechat from './realtimechat.png'
 import pokedex from './pokedex.png'
 import siteasimovjr from './siteasimovjr.png'
 import iaregclas from './iaregclas.png'
+import industrialFleetIntelligence from './industrial-fleet-intelligence.png'
 import rickandmorty from './rickandmorty.png'
 import proescolaformulario from './proescolaformulario.png'
 import angularLogo from './angular.png'
@@ -38,6 +39,7 @@ export {
     pokedex,
     siteasimovjr,
     iaregclas,
+    industrialFleetIntelligence,
     rickandmorty,
     proescolaformulario,
     angularLogo,

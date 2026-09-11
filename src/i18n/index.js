@@ -84,7 +84,10 @@ export const translations = {
     projects: {
       titlePrefix: 'Meus',
       titleHighlight: 'projetos',
-      intro: 'Aqui estão alguns dos projetos que desenvolvi para praticar análise de dados, machine learning, desenvolvimento web, mobile e aplicações em tempo real. Alguns possuem gravações salvas no Drive para mostrar o projeto funcionando.',
+      intro: 'Uma seleção de projetos em dados, IA, web, mobile e software. Os destaques mostram sistemas mais completos, com arquitetura, pipelines, backend, interface e decisões técnicas pensadas para cenários próximos do mercado.',
+      featuredKicker: 'Destaques',
+      featuredTitle: 'Projetos de maior impacto',
+      featuredIntro: 'Projetos maiores e mais recentes, posicionados para mostrar profundidade técnica, visão de produto e capacidade de construir sistemas ponta a ponta.',
       repository: 'Repositório',
       liveSite: 'Site',
       recording: 'Gravação',
@@ -92,6 +95,11 @@ export const translations = {
       openRepository: 'Abrir repositório',
       openLiveSite: 'Abrir site',
       openRecording: 'Abrir gravação do projeto',
+      statusLabel: 'Status',
+      statuses: {
+        completed: 'Finalizado',
+        inProgress: 'Em andamento',
+      },
       filterLabel: 'Filtrar projetos por categoria',
       filters: {
         all: 'Todos',
@@ -199,7 +207,10 @@ export const translations = {
     projects: {
       titlePrefix: 'My',
       titleHighlight: 'projects',
-      intro: 'Here are some of the projects I built to practice data analysis, machine learning, web development, mobile development, and realtime applications. Some include Drive recordings showing the project in action.',
+      intro: 'A selection of projects across data, AI, web, mobile, and software. The featured work highlights larger systems with architecture, pipelines, backend services, interfaces, and technical decisions shaped around market-like scenarios.',
+      featuredKicker: 'Featured',
+      featuredTitle: 'Highest-impact projects',
+      featuredIntro: 'Larger and more recent projects positioned to show technical depth, product thinking, and the ability to build end-to-end systems.',
       repository: 'Repository',
       liveSite: 'Website',
       recording: 'Recording',
@@ -207,6 +218,11 @@ export const translations = {
       openRepository: 'Open repository',
       openLiveSite: 'Open website',
       openRecording: 'Open project recording',
+      statusLabel: 'Status',
+      statuses: {
+        completed: 'Completed',
+        inProgress: 'In progress',
+      },
       filterLabel: 'Filter projects by category',
       filters: {
         all: 'All',
