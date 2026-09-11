@@ -15,6 +15,9 @@ const ALLOWED_EXTERNAL_HOSTS = new Set([
   'github.com',
   'www.asimovjr.com.br',
   'www.github.com',
+  'youtube.com',
+  'www.youtube.com',
+  'youtu.be',
 ]);
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/u;

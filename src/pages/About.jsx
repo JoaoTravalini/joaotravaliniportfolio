@@ -17,7 +17,11 @@ const skillGroupDefinitions = [
   },
   {
     id: 'backendData',
-    skills: ['Express.js', 'Apache Spark', 'Apache Kafka'],
+    skills: ['Express.js', 'FastAPI', 'Apache Spark', 'Apache Kafka'],
+  },
+  {
+    id: 'cloudAi',
+    skills: ['LangGraph', 'MLflow', 'SHAP', 'Google Cloud', 'BigQuery'],
   },
   {
     id: 'databases',

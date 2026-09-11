@@ -62,6 +62,7 @@ test('limits contact message length', () => {
 test('allows only approved https external links', () => {
   assert.equal(getSafeExternalUrl('https://github.com/JoaoTravalini').startsWith('https://github.com/'), true);
   assert.equal(getSafeExternalUrl('https://drive.google.com/file/d/example/view').startsWith('https://drive.google.com/'), true);
+  assert.equal(getSafeExternalUrl('https://www.youtube.com/watch?v=Tntl_y1lTm0').startsWith('https://www.youtube.com/'), true);
   assert.equal(getSafeExternalUrl('javascript:alert(1)'), '');
   assert.equal(getSafeExternalUrl('http://github.com/JoaoTravalini'), '');
   assert.equal(getSafeExternalUrl('https://evil.example/phishing'), '');

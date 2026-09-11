@@ -114,6 +114,36 @@ export const skills = [
         theme: "btn-back-green",
     },
     {
+        name: "FastAPI",
+        shortName: "API",
+        theme: "btn-back-green",
+    },
+    {
+        name: "LangGraph",
+        shortName: "LG",
+        theme: "btn-back-blue",
+    },
+    {
+        name: "MLflow",
+        shortName: "ML",
+        theme: "btn-back-black",
+    },
+    {
+        name: "SHAP",
+        shortName: "SHAP",
+        theme: "btn-back-blue",
+    },
+    {
+        name: "Google Cloud",
+        shortName: "GCP",
+        theme: "btn-back-blue",
+    },
+    {
+        name: "BigQuery",
+        shortName: "BQ",
+        theme: "btn-back-yellow",
+    },
+    {
         imageUrl: flutterLogo,
         name: "Flutter",
         shortName: "Fl",
